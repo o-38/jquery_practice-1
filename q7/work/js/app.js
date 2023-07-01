@@ -21,7 +21,11 @@ $(function(){
     console.log("電話番号");
     console.log($("#tel").val());
     console.log("購読情報");
-    console.log($('[name="subscription"]:checked').val());
+    const $checkboxs = $('[name="subscription"]:checked');
+    for (let i =0; i < $checkboxs.length; i++){
+      const $checkbox = $($checkboxs[i]);
+      console.log($checkbox.val());
+    }
   })
 })
 
